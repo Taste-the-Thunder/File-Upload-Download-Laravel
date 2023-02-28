@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\ImageController;
+use App\Http\Controllers\Api\PDFController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('image',[ImageController::class, 'imageStore']);
+Route::post('pdf',[PDFController::class, 'pdfStore']);
 
